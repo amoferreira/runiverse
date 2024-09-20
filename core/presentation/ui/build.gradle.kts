@@ -40,4 +40,8 @@ dependencies {
     implementation(libs.androidx.compose.ui.tooling.preview)
     debugImplementation(libs.androidx.compose.ui.tooling)
     api(libs.androidx.compose.material3)
+
+    // Project dependencies
+    implementation(projects.core.domain)
+    implementation(projects.core.presentation.designsystem)
 }
