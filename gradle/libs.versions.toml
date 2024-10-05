@@ -16,6 +16,7 @@ ktorClientLogging = "2.3.8"
 ktorServerCallLogging = "2.3.7"
 koin = "3.5.6"
 composeBom = "2024.04.01"
+composeCompiler = "1.5.9"
 navigationCompose = "2.8.1"
 room = "2.6.1"
 appcompat = "1.7.0"
@@ -41,7 +42,7 @@ desugar_jdk_libs = "2.1.2"
 # Project versions
 projectApplicationId = "com.amoferreira.runiverse"
 projectVersionName = "1.0"
-projectMinSdk = "25"
+projectMinSdkVersion = "25"
 projectTargetSdkVersion = "34"
 projectCompileSdkVersion = "34"
 projectVersionCode = "1"
@@ -97,6 +98,13 @@ play-services-maps = { group = "com.google.android.gms", name = "play-services-m
 google-maps-android-utils-ktx = { module = "com.google.maps.android:maps-utils-ktx", version.ref = "mapsUtils"}
 annotation = { group = "androidx.annotation", name = "annotation", version.ref = "annotation" }
 
+# Gradle
+android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
+android-tools-common = { group = "com.android.tools", name = "common", version.ref = "androidTools" }
+kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+ksp-gradlePlugin = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
+room-gradlePlugin = { group = "androidx.room", name = "room-gradle-plugin", version.ref = "room" }
+
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 android-library = { id = "com.android.library", version.ref = "agp" }
@@ -108,3 +116,32 @@ org-jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "org
 androidDynamicFeature = { id = "com.android.dynamic-feature", version.ref = "agp" }
 mapsplatform-secrets-plugin = { id = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin", version.ref = "secretsPlugin"}
 
+runiverse-android-application = { id = "runiverse.android.application", version = "unespecified" }
+runiverse-android-application-compose = { id = "runiverse.android.application.compose", version = "unespecified" }
+runiverse-android-library = { id = "runiverse.android.library", version = "unespecified" }
+runiverse-android-library-compose = { id = "runiverse.android.library.compose", version = "unespecified" }
+runiverse-android-feature-ui = { id = "runiverse.android.feature.ui", version = "unespecified" }
+runiverse-android-room = { id = "runiverse.android.room", version = "unespecified" }
+runiverse-jvm-library = { id = "runiverse.jvm.library", version = "unespecified" }
+runiverse-jvm-ktor = { id = "runiverse.jvm.ktor", version = "unespecified" }
+
+[bundles]
+compose = [
+    "androidx-activity-compose",
+    "androidx-lifecycle-runtime-compose",
+    "androidx-lifecycle-viewmodel-compose",
+    "androidx-compose-ui",
+    "androidx-compose-ui-graphics",
+    "androidx-compose-ui-tooling-preview",
+]
+compose-debug = ["androidx-compose-ui-tooling", "androidx-compose-ui-test-manifest"]
+koin = ["koin-core", "koin-android", "koin-android-workmanager"]
+koin-compose = ["koin-core", "koin-android", "koin-android-workmanager", "koin-androidx-compose"]
+ktor = [
+    "ktor-client-auth",
+    "ktor-client-cio",
+    "ktor-client-content-negotiation",
+    "ktor-client-core",
+    "ktor-client-logging",
+    "ktor-serialization-kotlinx-json",
+]
