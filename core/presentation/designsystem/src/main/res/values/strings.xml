@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Runiverse</string>
+    <string name="welcome_to_runiverse">Welcome to Runiverse!</string>
+    <string name="runiverse_description">Track your runs, set goals and achieve fitness milestones with Runiverse intuitive app.</string>
+    <string name="sign_in_button">Sign in</string>
+    <string name="sign_up_button">Sign up</string>
+</resources>
