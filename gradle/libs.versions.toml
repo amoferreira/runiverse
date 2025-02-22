@@ -16,6 +16,7 @@ ktor = "2.3.8"
 ktorClientLogging = "2.3.8"
 ktorServerCallLogging = "2.3.7"
 koin = "3.5.6"
+kover = "0.8.3"
 composeBom = "2024.04.01"
 composeCompiler = "1.5.9"
 navigationCompose = "2.8.1"
@@ -117,6 +118,7 @@ room = { id = "androidx.room", version.ref = "room" }
 org-jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "org-jetbrains-kotlin-jvm" }
 androidDynamicFeature = { id = "com.android.dynamic-feature", version.ref = "agp" }
 mapsplatform-secrets-plugin = { id = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin", version.ref = "secretsPlugin"}
+kover = { id = "org.jetbrains.kotlinx.kover", version.ref = "kover" }
 
 runiverse-android-application = { id = "runiverse.android.application", version = "unespecified" }
 runiverse-android-application-compose = { id = "runiverse.android.application.compose", version = "unespecified" }

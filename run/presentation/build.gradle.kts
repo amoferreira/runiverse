@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.runiverse.android.feature.ui)
+    alias(libs.plugins.kover)
 }
 
 android {

@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.runiverse.android.library)
+    alias(libs.plugins.kover)
 }
 
 android {

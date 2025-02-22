@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.runiverse.android.application.compose)
     alias(libs.plugins.runiverse.jvm.ktor)
     alias(libs.plugins.mapsplatform.secrets.plugin)
+    alias(libs.plugins.kover)
 }
 
 android {
