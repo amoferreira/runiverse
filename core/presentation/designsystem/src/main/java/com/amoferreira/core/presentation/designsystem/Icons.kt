@@ -24,6 +24,10 @@ val CheckIcon: ImageVector
     @Composable
     get() = ImageVector.vectorResource(id = R.drawable.check)
 
+val CrossIcon: ImageVector
+    @Composable
+    get() = ImageVector.vectorResource(id = R.drawable.cross)
+
 val DangerIcon: ImageVector
     @Composable
     get() = ImageVector.vectorResource(id = R.drawable.danger)
@@ -55,6 +59,10 @@ val KeyboardArrowUpIcon: ImageVector
 val LocationIcon: ImageVector
     @Composable
     get() = ImageVector.vectorResource(id = R.drawable.location)
+
+val LockIcon: ImageVector
+    @Composable
+    get() = ImageVector.vectorResource(id = R.drawable.lock)
 
 val LogoIcon: ImageVector
     @Composable

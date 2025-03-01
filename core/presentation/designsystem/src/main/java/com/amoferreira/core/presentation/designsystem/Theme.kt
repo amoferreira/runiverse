@@ -19,6 +19,7 @@ val DarkColorScheme = darkColorScheme(
     onBackground = RuniverseWhite,
     onSurface = RuniverseWhite,
     onSurfaceVariant = RuniverseGray,
+    error = RuniverseRed,
 )
 
 @Composable
