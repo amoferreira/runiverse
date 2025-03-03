@@ -5,4 +5,7 @@ plugins {
 
 dependencies {
     implementation(projects.core.domain)
+    testImplementation(libs.junit)
+    testImplementation(libs.mockk)
+    implementation(libs.faker)
 }
