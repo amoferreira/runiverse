@@ -8,6 +8,8 @@ kotlin = "1.9.22"
 coreKtx = "1.13.1"
 junit = "4.13.2"
 junitVersion = "1.2.1"
+mockk = "1.13.16"
+faker = "1.16.0"
 espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.6"
 lifecycleRuntimeAndroid = "2.8.6"
@@ -100,7 +102,8 @@ org-mongodb-bson = { module = "org.mongodb:bson", version.ref = "bson" }
 play-services-maps = { group = "com.google.android.gms", name = "play-services-maps", version.ref = "playServicesMaps" }
 google-maps-android-utils-ktx = { module = "com.google.maps.android:maps-utils-ktx", version.ref = "mapsUtils"}
 annotation = { group = "androidx.annotation", name = "annotation", version.ref = "annotation" }
-
+mockk = { module = "io.mockk:mockk", version.ref = "mockk"}
+faker = { group = "io.github.serpro69", name = "kotlin-faker", version.ref = "faker" }
 # Gradle
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
 android-tools-common = { group = "com.android.tools", name = "common", version.ref = "androidTools" }
