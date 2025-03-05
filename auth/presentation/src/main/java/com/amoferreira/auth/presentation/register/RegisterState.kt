@@ -1,7 +1,6 @@
 package com.amoferreira.auth.presentation.register
 
-import androidx.compose.foundation.ExperimentalFoundationApi
-    import androidx.compose.foundation.text.input.TextFieldState
+import androidx.compose.foundation.text.input.TextFieldState
 import com.amoferreira.auth.domain.PasswordValidationState
 
 data class RegisterState(

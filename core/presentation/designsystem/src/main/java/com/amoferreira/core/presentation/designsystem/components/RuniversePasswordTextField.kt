@@ -129,8 +129,8 @@ fun RuniversePasswordTextField(
                                 ),
                                 modifier = Modifier.fillMaxWidth(),
                             )
-                            innerBox()
                         }
+                        innerBox()
                     }
                     Spacer(modifier = Modifier.width(16.dp))
                     IconButton(onClick = onPasswordVisibilityToggleClick) {
