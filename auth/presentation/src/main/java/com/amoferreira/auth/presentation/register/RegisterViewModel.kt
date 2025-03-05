@@ -1,17 +1,15 @@
 package com.amoferreira.auth.presentation.register
 
-import androidx.compose.foundation.ExperimentalFoundationApi
-import androidx.compose.foundation.text2.input.textAsFlow
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import androidx.compose.runtime.snapshotFlow
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.amoferreira.auth.domain.UserDataValidator
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 
-@OptIn(ExperimentalFoundationApi::class)
 class RegisterViewModel(
     private val userDataValidator: UserDataValidator,
 ) : ViewModel() {
@@ -20,14 +18,14 @@ class RegisterViewModel(
         private set
 
     init {
-        state.email.textAsFlow()
+        snapshotFlow { state.email }
             .onEach { email ->
                 state = state.copy(
                     isEmailValid = userDataValidator.isEmailValid(email.toString())
                 )
             }.launchIn(viewModelScope)
 
-        state.password.textAsFlow()
+        snapshotFlow { state.password }
             .onEach { password ->
                 state = state.copy(
                     passwordValidationState = userDataValidator.validatePassword(

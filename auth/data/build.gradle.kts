@@ -9,6 +9,7 @@ android {
 }
 
 dependencies {
+    implementation(libs.bundles.koin)
 
     // Project dependencies
     implementation(projects.auth.domain)

@@ -4,7 +4,15 @@ import androidx.compose.runtime.Composable
 
 @Composable
 fun IntroScreenContainer(
-
+    onSignUpClick: () -> Unit,
+    onSignInClick: () -> Unit,
 ) {
-    IntroScreen({})
+    IntroScreen(
+        onAction = { action ->
+            when (action) {
+                IntroAction.OnSignInClick -> onSignInClick()
+                IntroAction.OnSignUpClick -> onSignUpClick()
+            }
+        }
+    )
 }
