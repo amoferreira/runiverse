@@ -1,10 +1,9 @@
 package com.amoferreira.auth.presentation.register
 
 import androidx.compose.foundation.ExperimentalFoundationApi
-import androidx.compose.foundation.text2.input.TextFieldState
+    import androidx.compose.foundation.text.input.TextFieldState
 import com.amoferreira.auth.domain.PasswordValidationState
 
-@OptIn(ExperimentalFoundationApi::class)
 data class RegisterState(
     val email: TextFieldState = TextFieldState(),
     val isEmailValid: Boolean = false,
