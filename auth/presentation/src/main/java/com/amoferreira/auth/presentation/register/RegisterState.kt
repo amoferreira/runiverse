@@ -1,7 +1,6 @@
 package com.amoferreira.auth.presentation.register
 
-import androidx.compose.foundation.ExperimentalFoundationApi
-    import androidx.compose.foundation.text.input.TextFieldState
+import androidx.compose.foundation.text.input.TextFieldState
 import com.amoferreira.auth.domain.PasswordValidationState
 
 data class RegisterState(
@@ -11,5 +10,5 @@ data class RegisterState(
     val isPasswordVisible: Boolean = false,
     val passwordValidationState: PasswordValidationState = PasswordValidationState(),
     val isRegistering: Boolean = false,
-    val canRegister: Boolean = passwordValidationState.isValidPassword && !isRegistering,
+    val canRegister: Boolean = false,
 )

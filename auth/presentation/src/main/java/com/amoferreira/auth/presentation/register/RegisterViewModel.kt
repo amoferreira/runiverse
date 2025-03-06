@@ -9,6 +9,7 @@ import androidx.lifecycle.viewModelScope
 import com.amoferreira.auth.domain.UserDataValidator
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
+import timber.log.Timber
 
 class RegisterViewModel(
     private val userDataValidator: UserDataValidator,
@@ -18,19 +19,25 @@ class RegisterViewModel(
         private set
 
     init {
-        snapshotFlow { state.email }
+        snapshotFlow { state.email.text }
             .onEach { email ->
+                Timber.i("New email input: $email")
+                val isEmailValid = userDataValidator.isEmailValid(email.toString())
                 state = state.copy(
-                    isEmailValid = userDataValidator.isEmailValid(email.toString())
+                    isEmailValid = isEmailValid,
+                    canRegister = isEmailValid && state.passwordValidationState.isValidPassword &&
+                            !state.isRegistering,
                 )
             }.launchIn(viewModelScope)
 
-        snapshotFlow { state.password }
+        snapshotFlow { state.password.text }
             .onEach { password ->
+                Timber.i("New password input: $password")
+                val passwordState = userDataValidator.validatePassword(password.toString())
                 state = state.copy(
-                    passwordValidationState = userDataValidator.validatePassword(
-                        password.toString()
-                    )
+                    passwordValidationState = passwordState,
+                    canRegister = passwordState.isValidPassword && state.isEmailValid &&
+                            !state.isRegistering,
                 )
             }.launchIn(viewModelScope)
     }
