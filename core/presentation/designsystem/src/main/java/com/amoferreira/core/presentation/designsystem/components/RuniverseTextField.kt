@@ -146,8 +146,8 @@ fun RuniverseTextField(
                                 ),
                                 modifier = Modifier.fillMaxWidth(),
                             )
-                            innerBox()
                         }
+                        innerBox()
                     }
                     if (endIcon != null) {
                         Spacer(modifier = Modifier.width(16.dp))

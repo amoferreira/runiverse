@@ -1,6 +1,5 @@
 package com.amoferreira.auth.presentation.register
 
-import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -33,7 +32,6 @@ import com.amoferreira.core.presentation.designsystem.components.RuniversePasswo
 import com.amoferreira.core.presentation.designsystem.components.RuniverseTextField
 import com.amoferreira.core.presentation.designsystem.components.TextButton
 
-@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun RegisterScreen(
     uiState: RegisterState,
