@@ -4,6 +4,7 @@ import android.app.Application
 import com.amoferreira.auth.data.di.authDataModule
 import com.amoferreira.auth.presentation.di.authViewModelModule
 import com.amoferreira.runiverse.di.appModule
+import di.coreDataModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -24,6 +25,7 @@ class RuniverseApp: Application() {
                 authDataModule,
                 authViewModelModule,
                 appModule,
+                coreDataModule,
             )
         }
     }

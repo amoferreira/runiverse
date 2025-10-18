@@ -11,6 +11,7 @@ android {
 dependencies {
 
     implementation(libs.timber)
+    implementation(libs.bundles.koin)
 
     // Project dependencies
     implementation(projects.core.domain)
